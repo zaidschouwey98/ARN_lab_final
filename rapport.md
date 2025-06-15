@@ -84,7 +84,7 @@ Nous avons également pu tester notre modèle en situation réelle. En effet, no
 
 Une photo d’un cheval prise en pleine journée a été correctement classifiée sans difficulté.
 Un chien photographié en intérieur a également été correctement classifié avec score de confiance moyen.
-Par contre une image de sacré de Birmanie également prise en appartement mais cette fois dans la pénombre n'a pas été classifiée correctement. Le modèle l'a confondu avec un Bengal. On peut imaginer que la faible luminosité ont pu perturber la reconnaissance du pelage du sacré de Birmanie. En effet, une autre photo du même chat prise à la lumière prédit la bonne classification.
+Par contre une image de sacré de Birmanie également prise en appartement mais cette fois dans la pénombre n'a pas été classifiée correctement. Le modèle l'a confondu avec un Bengal. On peut imaginer que la faible luminosité a pu perturber la reconnaissance du pelage du sacré de Birmanie. En effet, une autre photo du même chat prise à la lumière prédit la bonne classification.
 
 Ces observations montrent que le modèle reste performant avec des photos provenant de situations réelles simples.
 
