@@ -58,7 +58,7 @@ Le transfer learning a été utilisé avec MobileNetV2 pour réutiliser des cara
 ### Performances sur le test set
 - F1-score (pondéré) : 0.98
 - Matrice de confusion :
-  ![Matrice de confusion](lien_vers_image_matrice_confusion)
+  ![Matrice de confusion](./img/conf_matrix.png)
 - F1-score par classe:
 ```
 Rapport de classification par classe:
