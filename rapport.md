@@ -2,6 +2,7 @@
 *par Léonard Jouve & Zaïd Schouwey*
 ## 1. Introduction
 Ce rapport présente une application de classification d'images utilisant des réseaux de neurones convolutifs (CNN) avec une approche de transfer learning. L'objectif est de créer un modèle capable de reconnaître quatre classes d'animaux : bengal, cheval, chien et Sacredebimanie. La méthodologie comprend la création d'un jeu de données personnalisé, l'utilisation de techniques d'augmentation de données, l'entraînement d'un modèle MobileNetV2 pré-entraîné avec des couches personnalisées, et l'évaluation des performances du modèle.
+Les données que nous avons collectées proviennent de photos prisent depuis notre téléphone ou de publication sur Facebook.
 
 ## 2. Le problème
 ### Classes cibles
@@ -36,7 +37,7 @@ Les images présentent une diversité intra-classe (par exemple, différentes ra
 
 ## 4. Création du modèle
 ### Architecture
-- Module de base : MobileNetV2 pré-entraîné (poids gelés)
+- Modèle de base : MobileNetV2 pré-entraîné (poids gelés)
 - Couches ajoutées :
   - GlobalAveragePooling2D()
   - Dense(256, activation='relu')
@@ -51,7 +52,7 @@ Les images présentent une diversité intra-classe (par exemple, différentes ra
 - Nombre d'époques : 6
 
 ### Transfer learning
-Le transfer learning a été utilisé avec MobileNetV2 pour réutiliser des caractéristiques apprises sur ImageNet. Cela permet d'obtenir de bonnes performances même avec un petit jeu de données.
+Le transfer learning a été utilisé avec MobileNetV2 pour réutiliser des caractéristiques apprises sur ImageNet. Cela permet d'obtenir de bonnes performances même avec un petit jeu de données. En effet on peut conserver les premières couches du modèle car elles permettent de reconnaitre des caractéristiques génériques et simples. On freeze alors les poids des premières couches qui on dejà été entrainées. On ajoutes ensuite uniquement des couches supplémentaire permettant de spécialiser le modèle pour notre scénario.
 
 ## 5. Résultats
 ### Performances sur le test set
